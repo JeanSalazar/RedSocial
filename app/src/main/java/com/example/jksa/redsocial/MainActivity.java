@@ -2,6 +2,7 @@ package com.example.jksa.redsocial;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -20,11 +21,20 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.example.jksa.redsocial.Clases.Common;
+import com.example.jksa.redsocial.Clases.HTTPDataHandler;
+import com.example.jksa.redsocial.Clases.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,6 +44,8 @@ public class MainActivity extends AppCompatActivity
     private DatabaseReference databaseReference;
     private FirebaseStorage storage;
     private StorageReference storageReference;
+
+    private List<User> users = new ArrayList<User>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +62,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        sacarDatos();
     }
 
 
@@ -139,6 +153,37 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             mensajeCerrarSesion();
+        }
+    }
+
+
+    // Metodo para sacar los datos despues se deberia de mostrarlos
+    private void sacarDatos(){
+        new GetData().execute(Common.getAdressAPI());
+    }
+
+
+    public class GetData extends AsyncTask<String, Void, String>{
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String stream = null;
+            String urlString = strings[0];
+
+            HTTPDataHandler handler = new HTTPDataHandler();
+            stream = handler.getHTTPData(urlString);
+            return stream;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            Gson gson = new Gson();
+            Type list_type = new TypeToken<List<User>>(){}.getType();
+            users = gson.fromJson(s,list_type);
+
+            Toast.makeText(MainActivity.this,users.get(0).toString(),Toast.LENGTH_SHORT).show();
         }
     }
 }
