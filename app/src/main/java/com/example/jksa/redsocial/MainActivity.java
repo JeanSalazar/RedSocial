@@ -172,8 +172,6 @@ public class MainActivity extends AppCompatActivity
 
             HTTPDataHandler handler = new HTTPDataHandler();
 
-            Toast.makeText(MainActivity.this,urlString ,Toast.LENGTH_SHORT).show();
-
             stream = handler.getHTTPData(urlString);
             return stream;
         }
