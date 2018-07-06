@@ -32,7 +32,7 @@ public class HTTPDataHandler {
                 String line="";
                 while ((line=reader.readLine()) != null)
                     builder.append(line);
-                builder.toString();
+                stream = builder.toString();
                 urlConnection.disconnect();
             }else{
 

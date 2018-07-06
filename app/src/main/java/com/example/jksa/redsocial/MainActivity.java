@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity
             users = gson.fromJson(s,list_type);
 
             if(users!=null)
-                Toast.makeText(MainActivity.this,users.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,users.get(0).getUser().toString(),Toast.LENGTH_SHORT).show();
         }
     }
 }
