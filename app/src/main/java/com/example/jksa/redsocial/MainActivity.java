@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity
             Type list_type = new TypeToken<List<User>>(){}.getType();
             users = gson.fromJson(s,list_type);
 
-            Toast.makeText(MainActivity.this,users.get(0).toString(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,users.toString(),Toast.LENGTH_SHORT).show();
         }
     }
 }
