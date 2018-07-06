@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:orientation="vertical"
+    tools:context="com.example.jksa.redsocial.AcercaDeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_escudo"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/escudo" />
+
+            <TextView
+                android:id="@+id/tv_voto_electronico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Red Social"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_realizado_por"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Realizado por:"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_mano_1"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/mano" />
+
+                <TextView
+                    android:id="@+id/tv_integrante_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Barreda Muñoz, Solange"
+                    android:textColor="@color/material_blue_grey_95"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_mano_2"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/mano" />
+
+                <TextView
+                    android:id="@+id/tv_integrante_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Casas Bravo, Kevin"
+                    android:textColor="@color/material_blue_grey_95"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_mano_3"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/mano" />
+
+                <TextView
+                    android:id="@+id/tv_integrante_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Quiroz Cervantes, Sebastian"
+                    android:textColor="@color/material_blue_grey_95"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_mano_4"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/mano" />
+
+                <TextView
+                    android:id="@+id/tv_integrante_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Salazar Arizanca, Jean Kristofer"
+                    android:textColor="@color/material_blue_grey_95"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Version 1.0.0"
+                android:textAlignment="center"
+                android:textColor="@color/material_blue_grey_95"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

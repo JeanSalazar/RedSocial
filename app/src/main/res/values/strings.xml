@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Red Social</string>
+
+    <string name="act_acercade">Acerca De</string>
+    <string name="act_welcome">Bienvenido</string>
+    <string name="act_login">Acceso a la Aplicacion</string>
+    <string name="act_registro">Registro</string>
+    <string name="title_activity_main">Red Social</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Red Social</string>
+    <string name="nav_header_subtitle">Bienvenido</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Ajustes</string>
+</resources>
