@@ -171,6 +171,9 @@ public class MainActivity extends AppCompatActivity
             String urlString = strings[0];
 
             HTTPDataHandler handler = new HTTPDataHandler();
+
+            Toast.makeText(MainActivity.this,urlString ,Toast.LENGTH_SHORT).show();
+
             stream = handler.getHTTPData(urlString);
             return stream;
         }
@@ -183,7 +186,8 @@ public class MainActivity extends AppCompatActivity
             Type list_type = new TypeToken<List<User>>(){}.getType();
             users = gson.fromJson(s,list_type);
 
-            Toast.makeText(MainActivity.this,users.toString(),Toast.LENGTH_SHORT).show();
+            if(users!=null)
+                Toast.makeText(MainActivity.this,users.toString(),Toast.LENGTH_SHORT).show();
         }
     }
 }
